@@ -1,0 +1,14 @@
+{
+  "name": "foodfire",
+  "version": "1.0.0",
+  "description": "this is first react project",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "gaurav",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
