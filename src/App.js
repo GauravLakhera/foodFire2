@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import { createRoot } from "react-dom/client";
 import Footer from "./components/Footer";
 import Body from "./components/Body";
@@ -10,6 +10,7 @@ import Error from "./components/Error";
 
 //Default import=>
 import HeadComponent from "./components/Header"; //imorting the default import from Header.js
+import RestaurentMenu from "./components/RestaurentMenu";
 
 //Named import=>
 // import { Logo,Tital } from "./components/Header";//importing using the name of variable
@@ -61,10 +62,14 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <ConnectUs />,
       },
+      {
+        path:"/restaurent/:Resid",
+        element :<RestaurentMenu/>
+      }
     ],
     
   },
 ]);
 
-const root = createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={appRouter} />);
