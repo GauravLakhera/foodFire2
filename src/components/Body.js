@@ -58,13 +58,13 @@ const Body = () => {
     );
     setcarousel(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
     //console.log(carousel);
-    console.log(restaurents)
+    console.log(restaurents);
   }
 
   const isOnline = useOnlineStatues();
   if (isOnline === false) return <h1>Net to khol le bhai mere</h1>;
 
-  return restaurents.length === 0 ? (
+  return restaurents.length === 0 || typeof restaurents === undefined ? (
     <>
       {/* <div className="search-container">
       <input

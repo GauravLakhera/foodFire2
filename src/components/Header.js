@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import home from "../images/home.png";
 import contectus from "../images/contectus.png";
-import aboutus from "../images/aboutus.png";
+import aboutus from "../images/about.png";
 import cart from "../images/cart.png";
 
 const HeadComponent = () => (
@@ -13,7 +13,7 @@ const HeadComponent = () => (
           src="https://media.istockphoto.com/id/1038356020/vector/restaurant-icon.jpg?s=612x612&w=0&k=20&c=Tk_v3JuJA4lz_8ZRJi78xS4p75Idqt97uEtYJciVtFI="
         />
       </a>
-      <h4 className="text-xs p-1 md:text-sm md:p-2 first-line:underline text-slate-700">
+      <h4 className="hidden md:block text-xs p-1 md:text-sm md:p-2 first-line:underline text-slate-700 ">
         Rishikesh,Uttarakhand,Dehradun -249201
       </h4>
     </div>
@@ -25,13 +25,13 @@ const HeadComponent = () => (
     <ul className="flex  pr-2 space-x-1 md:space-x-8">
       <li className=" p-1 rounded-md hover:rounded-full ">
         <Link to="/">
-          <img className="w-6 h-5 md:w-8 md:h-8 " src={home} alt="Home"></img>
+          <img className="w-5 h-5 md:w-8 md:h-8 " src={home} alt="Home"></img>
         </Link>
       </li>
       <li className=" p-1 rounded-md hover:rounded-full">
         <Link to="/about">
           <img
-            className="w-6 h-5 md:w-8 md:h-8"
+            className="w-5 h-5 md:w-8 md:h-8"
             src={contectus}
             alt="Contect us"
           ></img>
@@ -40,7 +40,7 @@ const HeadComponent = () => (
       <li className=" p-1 rounded-md hover:rounded-full">
         <Link to="/contact">
           <img
-            className="w-6 h-5 md:w-8 md:h-8"
+            className="w-5 h-5 md:w-8 md:h-8"
             src={aboutus}
             alt="About us"
           ></img>
@@ -48,7 +48,7 @@ const HeadComponent = () => (
       </li>
       <li className="p-1 rounded-md hover:rounded-full">
         <Link to="/">
-          <img className="w-6 h-5 md:w-8 md:h-8" src={cart} alt="cart"></img>
+          <img className="w-5 h-5 md:w-8 md:h-8" src={cart} alt="cart"></img>
         </Link>
       </li>
     </ul>
