@@ -1,6 +1,6 @@
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import ItemCrad from "./ResItemCard";
+
 import useRestaurentMenuInfo from "../utils/useRestarentMenuInfo";
 import star from "../images/star.png";
 import RestaurentCategory from "./RestaurentCategory";
@@ -62,7 +62,7 @@ const RestaurentMenu = () => {
             key={item.card.card.title}
             data={item.card.card}
             showItem={index === showIndex && true}
-            setShowIndex={()=>setShowIndex(index)}
+            setShowIndex={() => setShowIndex(index)}
           />
         ))}
       </div>

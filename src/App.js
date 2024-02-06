@@ -11,6 +11,9 @@ import Error from "./components/Error";
 //Default import=>
 import HeadComponent from "./components/Header"; //imorting the default import from Header.js
 import RestaurentMenu from "./components/RestaurentMenu";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 //Named import=>
 // import { Logo,Tital } from "./components/Header";//importing using the name of variable
@@ -37,9 +40,13 @@ import RestaurentMenu from "./components/RestaurentMenu";
 const AppLayout = () => {
   return (
     <>
+    <Provider store={appStore}>
+
+   
       <HeadComponent />
       <Outlet/>
       <Footer />
+      </Provider>
     </>
   );
 };
@@ -65,6 +72,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/restaurent/:Resid",
         element :<RestaurentMenu/>
+      },{
+        path:"/cart",
+        element :<Cart/>
+
       }
     ],
     
