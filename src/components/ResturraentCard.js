@@ -10,7 +10,7 @@ const ResturraentCard = ({
 }) => {
   return (
     <div className="cardContainer">
-      <div className="flex flex-col border m-3 shadow-xl   p-1 max-w-52 hover:scale-110  transition duration-300 ease-in-out hover:rounded-md">
+      <div className="flex flex-col border m-3 shadow-xl bg-slate-100  p-1 max-w-52 hover:scale-110  transition duration-300 ease-in-out hover:rounded-md">
         <img
           className="w-full h-56 object-cover rounded-t-lg   "
           src={IMG_CDN_URL + cloudinaryImageId}

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { IMG_CDN_URL } from "../constant";
-import { useDispatch } from "react-redux";
+
 import { cleareCart } from "../utils/cartSlice";
 
 const Cart = () => {
@@ -14,7 +14,7 @@ const Cart = () => {
 
   if (cardItems.length === 0)
     return (
-      <div className="p-1 text-black text-center font-semibold text-xl m-4">
+      <div className="p-1 text-black text-center font-semibold text-xl m-52">
         No items. Add Items{" "}
       </div>
     );

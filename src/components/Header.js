@@ -8,11 +8,10 @@ import { useSelector } from "react-redux";
 const HeadComponent = () => {
   //subscribing to the store
   const cartInfo = useSelector((store) => store.cart.items);
-  
 
   //store is provided by the react-redux this store in our appStore that we provided at the top level
   return (
-    <div className="flex justify-evenly items-center p-4 bg-slate-100 shadow-xl">
+    <div className="flex justify-evenly items-center p-4 bg-slate-100 shadow-md">
       <div className="flex items-start">
         <a href="/">
           <img
@@ -25,7 +24,7 @@ const HeadComponent = () => {
         </h4>
       </div>
 
-      <h2 className="font-semibold text-zinc-950 text-xl md:text-2xl">
+      <h2 className="font-mono font-bold text-slate-700 text-xl md:text-3xl">
         Food Fire
       </h2>
 
@@ -55,10 +54,18 @@ const HeadComponent = () => {
         </li>
         <li className="p-1 rounded-md hover:rounded-full">
           <Link to="/cart">
-            <img className="w-5 h-5 md:w-8 md:h-8" src={cart} alt="cart"></img>
-            <h1 className="text-md font-bold">
-              ({cartInfo.length})
-            </h1>
+            <div className=" flex flex-col items-center">
+              <img
+                className="w-5 h-5 md:w-8 md:h-8"
+                src={cart}
+                alt="cart"
+              ></img>
+              {cartInfo.length > 0 ? (
+                <h1 className="text-md font-bold">({cartInfo.length})</h1>
+              ) : (
+                <h1></h1>
+              )}
+            </div>
           </Link>
         </li>
       </ul>
